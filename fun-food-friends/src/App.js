@@ -14,7 +14,7 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.login = this.login.bind(this);
-    this.logount = this.logout.bind(this);
+    this.logout = this.logout.bind(this);
 
   }
 
@@ -105,7 +105,7 @@ class App extends Component {
             <div className='container'>
               <section className='add-item'>
                 <form onSubmit={this.handleSubmit}>
-                  <input type="text" name="username" placeholder="What's your name?" value={this.state.userdisplayName || this.state.user.email} />
+                  <input type="text" name="username" placeholder="What's your name?" value={this.state.user.displayName || this.state.user.email} />
                   <input type="text" name="currentItem" placeholder="What are you bringing?" onChange={this.handleChange} value={this.state.currentItem} />
                   <button>Add Item</button>
                 </form>
